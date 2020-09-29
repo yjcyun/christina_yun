@@ -1,99 +1,156 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.com">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby's hello-world starter
-</h1>
+# GATSBY MDX BLOG
 
-Kick off your project with this hello-world boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+## Project Setup
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.com/docs/gatsby-starters/)._
+1. Base - Gatsby Starter
+2. Components + Imports - ready
+3. main.css + styled components
+4. constants (different setup)
+5. Complete React Components for MDX
 
-## 🚀 Quick start
+## Boring Components
 
-1.  **Create a Gatsby site.**
+0. Home Page
+1. Navbar
+2. Sidebar
+3. Hero
+4. Footer
+5. Error Page
+6. Newsletter
 
-    Use the Gatsby CLI to create a new site, specifying the hello-world starter.
+```html
+<form
+  className="contact-form"
+  name="contact"
+  method="post"
+  netlify-honeypot="bot-field"
+  data-netlify="true"
+  action="/success"
+>
+  <input type="hidden" name="bot-field" />
+  <input type="hidden" name="form-name" value="contact" />
+</form>
+```
 
-    ```shell
-    # create a new Gatsby site using the hello-world starter
-    gatsby new my-hello-world-starter https://github.com/gatsbyjs/gatsby-starter-hello-world
-    ```
+7. Success Page (optional);
 
-1.  **Start developing.**
+## Basic MDX Setup
 
-    Navigate into your new site’s directory and start it up.
+1. Install mdx plugin
+2. Add `gatsby-plugin-mdx` to gatsby-config
+3. Setup Page - pageName.mdx /pages
+4. Basic Markdown
+   Syntax Highlighting - MDX EXTENSION
+5. Basic Styling
+6. Add React Components including Gatsby Link
+7. New Line Gotcha
 
-    ```shell
-    cd my-hello-world-starter/
-    gatsby develop
-    ```
+## Multiple Posts
 
-1.  **Open the source code and start editing!**
+1. Setup Posts Folder
+2. Add New filesystem Instance to gatsby-config
 
-    Your site is now running at `http://localhost:8000`!
+```js
+{
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `posts`,
+        path: `${__dirname}/src/posts`,
+      },
+    },
 
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.com/tutorial/part-five/#introducing-graphiql)._
+```
 
-    Open the `my-hello-world-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+4. Create a Brand New Folder For Post
+   Won't Query Name - setup is up to you
+5. Add mdx file
+6. DOUBLE CHECK PATHS (../../ - gotcha)
+7. Run 'gatsby clean' - just to be on the safe side
+8. Seperate Images Folder
+9. FrontMatter (space gotcha - title: first post)
+10. Imports after FrontMatter
 
-## 🧐 What's inside?
+## Create MDX/Post Pages Programatically
 
-A quick look at the top-level files and directories you'll see in a Gatsby project.
+1. Setup Query with unique value (most likely slug)
+2. Setup Template
+3. Run Query in gatsby-node.js - just like normal setup
+4. Pass Variable (slug)
+5. Run Query in Template using variable (slug)
 
-    .
-    ├── node_modules
-    ├── src
-    ├── .gitignore
-    ├── .prettierrc
-    ├── gatsby-browser.js
-    ├── gatsby-config.js
-    ├── gatsby-node.js
-    ├── gatsby-ssr.js
-    ├── LICENSE
-    ├── package-lock.json
-    ├── package.json
-    └── README.md
+## Create Categories Pages Programatically
 
-1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
+1. Repeat the same steps as posts just for categories.
 
-2.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
+## Add INLINE Images to MDX
 
-3.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
+1. Syntax - ![](./pathToImages/imageName - if in the same folder)
+2. Install - gatsby-transformer-remark
+3. Changes in gatsby config
 
-4.  **`.prettierrc`**: This is a configuration file for [Prettier](https://prettier.io/). Prettier is a tool to help keep the formatting of your code consistent.
+   remove - 'gatsby-plugin-mdx'
+   add
 
-5.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.com/docs/browser-apis/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
+```js
+{
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        gatsbyRemarkPlugins: [{ resolve: "gatsby-remark-images" }],
+      },
+    },
+```
 
-6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.com/docs/gatsby-config/) for more detail).
+4. Restart the server
+5. Whitespace gotchas and "gatsby clean"
+6. Styling - Good Luck!
 
-7.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.com/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
+## Videos
 
-8.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.com/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
+[Gatsby Video Reference] : https://www.gatsbyjs.org/docs/working-with-video/
 
-9.  **`LICENSE`**: This Gatsby starter is licensed under the 0BSD license. This means that you can see this file as a placeholder and replace it with your own license.
+### Reg Video
 
-10. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
+1. The same as regular video
+2. autoPlay - gotcha
+3. use like regular component
 
-11. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
+### Iframe
 
-12. **`README.md`**: A text file containing useful reference information about your project.
+1. Gatsby Docs
+2. Gotchas - url, styling
+3. Use in template - johnsmilga.com
 
-## 🎓 Learning Gatsby
+### MDX Wrapper
 
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.com/). Here are some places to start:
+1. Gatsby wrapRootElement
+   [Wrap Root Element ] : https://www.gatsbyjs.org/docs/browser-apis/#wrapRootElement
+2. MDX
+   [MDX Reference] : https://mdxjs.com/getting-started
+3. Gatsby/MDX Reference
+   [ Elements Reference] : https://www.gatsbyjs.org/docs/mdx/customizing-components/
 
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.com/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
+### prism-react-renderer
 
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.com/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
+[docs]: https://github.com/FormidableLabs/prism-react-renderer
 
-## 💫 Deploy
+```
+npm install --save prism-react-renderer
+```
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-hello-world)
+1. our code - props.children.props.children.trim()
+2. language -
+   props.children.props.className
+   className.replace(/language-/,'')
+3. theme
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/gatsbyjs/gatsby-starter-hello-world)
+### Favicon
 
-<!-- AUTO-GENERATED-CONTENT:END -->
+Favicon
+
+[favicon] : https://favicon.io/
+
+/static/favicon.ico
+
+### SEO
+
+[Gatsby Example] : https://www.gatsbyjs.org/docs/add-seo-component/

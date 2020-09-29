@@ -12,13 +12,13 @@ const Sidebar = () => {
       </TopWrapper>
       <NavLinks>
         <li><Link to='/'>portfolio</Link></li>
-        <li><Link to='/'>notes</Link></li>
-        <li><Link to='/'>about</Link></li>
-        <li><Link to='/'>contact</Link></li>
+        <li><Link to='/notes'>notes</Link></li>
+        <li><Link to='/about'>about</Link></li>
+        <li><Link to='/contact'>contact</Link></li>
       </NavLinks>
       <SocialLinks>
-        <li><a href=''><FaGithubAlt className='icon' /></a></li>
-        <li><a href=''><FaLinkedinIn className='icon' /></a></li>
+        <li><a href='https://github.com/yjcyun' target='_blank' rel='noreferrer'><FaGithubAlt className='icon' /></a></li>
+        <li><a href='https://github.com/yjcyun' target='_blank' rel='noreferrer'><FaLinkedinIn className='icon' /></a></li>
       </SocialLinks>
     </SidebarWrapper>
   )
@@ -32,7 +32,7 @@ const SidebarWrapper = styled.nav`
     transition: 0.3s all;
   }
   a:hover {
-    color: #2ac06e;
+    color: var(--accent-clr);
     text-decoration: underline;
   }
 `

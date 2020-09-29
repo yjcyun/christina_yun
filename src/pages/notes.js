@@ -1,12 +1,34 @@
 import React from 'react'
-import Layout from '../components/layout'
+import { graphql, useStaticQuery } from 'gatsby'
+import Layout from '../components/Layout'
+import Notes from '../components/Notes'
 
-const Notes = () => {
+const query = graphql`
+  {
+    notes: allMdx(sort: {fields: frontmatter___date, order: DESC}) {
+      nodes {
+        excerpt
+        frontmatter {
+          category
+          date(formatString: "MMM Do, YYYY")
+          slug
+          title
+        }
+        id
+      }
+    }
+  }
+`
+
+const NotesPage = () => {
+  const { notes:{nodes} } = useStaticQuery(query);
   return (
     <Layout>
-      Notes
+      <Notes notes={nodes}/>
     </Layout>
   )
 }
 
-export default Notes
+
+
+export default NotesPage

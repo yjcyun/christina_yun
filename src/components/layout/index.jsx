@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import Sidebar from './Sidebar'
 
-const Layout = ({ children }) => {
+const index = ({ children }) => {
   return (
     <LayoutWrapper className='page-center'>
       <Sidebar />
@@ -16,7 +16,8 @@ const LayoutWrapper = styled.div`
 
   @media(min-width:768px) {
     grid-template-columns: 1fr 3fr;
+    grid-gap: 2rem;
   }
 `
 
-export default Layout
+export default index
