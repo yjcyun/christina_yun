@@ -13,13 +13,6 @@ export const query = graphql`
         date(formatString: "MMM Do, YYYY")
         slug
         title
-        image {
-          childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
       }
       body
     }

@@ -82,6 +82,7 @@ const NoteListTemplate = ({ data, pageContext }) => {
 }
 
 const NotesWrapper = styled.div`
+  min-height: 76vh;
   .note-li {
     margin-bottom: 2rem;
     h2 {

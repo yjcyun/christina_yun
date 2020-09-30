@@ -1,9 +1,18 @@
 import { Link } from 'gatsby'
-import { FaLinkedinIn, FaGithubAlt } from 'react-icons/fa'
-import React from 'react'
+import { FaLinkedinIn, FaGithub } from 'react-icons/fa'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 
+const links = [
+  { to: '/', text: 'portfolio' },
+  { to: '/notes', text: 'notes' },
+  { to: '/about', text: 'about' },
+  { to: '/contact', text: 'contact' },
+]
+
 const Sidebar = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+
   return (
     <SidebarWrapper className='p-1'>
       <TopWrapper>
@@ -11,14 +20,13 @@ const Sidebar = () => {
         <p>Self-taught frontend developer documenting her learning experience.</p>
       </TopWrapper>
       <NavLinks>
-        <li><Link to='/'>portfolio</Link></li>
-        <li><Link to='/notes'>notes</Link></li>
-        <li><Link to='/about'>about</Link></li>
-        <li><Link to='/contact'>contact</Link></li>
+        {links.map((link, index) => (
+          <Link to={link.to} activeClassName='active'>{link.text}</Link>
+        ))}
       </NavLinks>
       <SocialLinks>
-        <li><a href='https://github.com/yjcyun' target='_blank' rel='noreferrer'><FaGithubAlt className='icon' /></a></li>
-        <li><a href='https://github.com/yjcyun' target='_blank' rel='noreferrer'><FaLinkedinIn className='icon' /></a></li>
+        <li><a href='https://github.com/yjcyun' target='_blank' rel='noreferrer'><FaGithub className='icon' /></a></li>
+        <li><a href='https://www.linkedin.com/in/xtina-yun/' target='_blank' rel='noreferrer'><FaLinkedinIn className='icon' /></a></li>
       </SocialLinks>
       <div className='vertical-line'></div>
     </SidebarWrapper>
@@ -40,7 +48,7 @@ const SidebarWrapper = styled.nav`
       top: 1.5rem;
       right: 0;
       width: 1px;
-      height: 23rem;
+      height: 25rem;
     }
   }
   a {
@@ -50,7 +58,6 @@ const SidebarWrapper = styled.nav`
   }
   a:hover {
     color: var(--accent-clr);
-    text-decoration: underline;
   }
 `
 const TopWrapper = styled.div`
@@ -64,12 +71,21 @@ const TopWrapper = styled.div`
       font-size: 1.3rem;
     }
   }
+  a:hover {
+    color: var(--dark-color);
+  }
 `
-const NavLinks = styled.ul`
-  li{
-    margin: 0.8rem 0;
+const NavLinks = styled.div`
+  a{
+    margin: 0.4rem 0;
   }
   margin: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  .active {
+    color: var(--accent-clr);
+    text-decoration: underline;
+  }
 `
 const SocialLinks = styled.ul`
   display: flex;
