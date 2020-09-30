@@ -38,8 +38,6 @@ const Portfolio = () => {
             >
               <Image
                 fluid={node.childImageSharp.fluid}
-                imgStyle={{ objectFit: 'contain' }}
-                style={{ maxHeight: '13rem' }}
               />
             </a>
             {/* EACH IMAGE FOOTER */}
@@ -88,11 +86,11 @@ const PortfolioWrapper = styled.section`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
   padding: 1rem;
+  grid-gap: 1.5rem;
   .grid-container {
     margin-bottom: 4rem;
   }
   .img-footer {
-    max-width: 22rem;
     margin: 0 auto;
   }
   .img-header {
