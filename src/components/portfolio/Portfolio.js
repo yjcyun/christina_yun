@@ -86,12 +86,9 @@ const PortfolioWrapper = styled.section`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
   padding: 1rem;
-  grid-gap: 1.5rem;
+  grid-column-gap: 2rem;
   .grid-container {
-    margin-bottom: 4rem;
-  }
-  .img-footer {
-    margin: 0 auto;
+    margin-bottom: 3rem;
   }
   .img-header {
     display: flex;
