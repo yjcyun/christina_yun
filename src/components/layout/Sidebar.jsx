@@ -7,7 +7,7 @@ const Sidebar = () => {
   return (
     <SidebarWrapper className='p-1'>
       <TopWrapper>
-        <h1>Christina Yun</h1>
+        <Link to='/'><h1>Christina Yun</h1></Link>
         <p>Self-taught frontend developer documenting her learning experience.</p>
       </TopWrapper>
       <NavLinks>
@@ -20,11 +20,29 @@ const Sidebar = () => {
         <li><a href='https://github.com/yjcyun' target='_blank' rel='noreferrer'><FaGithubAlt className='icon' /></a></li>
         <li><a href='https://github.com/yjcyun' target='_blank' rel='noreferrer'><FaLinkedinIn className='icon' /></a></li>
       </SocialLinks>
+      <div className='vertical-line'></div>
     </SidebarWrapper>
   )
 }
 
 const SidebarWrapper = styled.nav`
+  position: relative;
+  .vertical-line{
+    width: 100%;
+    height: 1px;
+    margin-top: 2rem;
+    background-color: #ececec;
+  }
+  @media(min-width:768px) {
+    .vertical-line{
+      margin-top: 0;
+      position: absolute;
+      top: 1.5rem;
+      right: 0;
+      width: 1px;
+      height: 23rem;
+    }
+  }
   a {
     color: var(--dark-clr);
     text-transform: uppercase;
@@ -39,6 +57,12 @@ const TopWrapper = styled.div`
   p{
     margin: 1rem 0;
     color: var(--grey-clr);
+  }
+  a{
+    text-transform: capitalize;
+    h1 {
+      font-size: 1.3rem;
+    }
   }
 `
 const NavLinks = styled.ul`

@@ -1,12 +1,13 @@
-import React from "react"
+import React from 'react'
+
 const Code = ({ children }) => {
   return (
     <code
       style={{
-        background: "#ccc",
-        color: "#fff",
-        padding: "1rem",
-        borderRadius: "var(--radius)",
+        background: '#ccc',
+        color: '#fff',
+        padding: '1rem',
+        borderRadius: 'var(--radius)',
       }}
     >
       {children}

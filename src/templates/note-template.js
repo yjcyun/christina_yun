@@ -46,9 +46,11 @@ const NoteTemplate = ({ data }) => {
 }
 
 const NoteTemplateWrapper = styled.article`
+  width: 100vw;
+  max-width: var(--max-width);
   h2 {
     margin-bottom: 0.8rem;
-    font-size: 3rem;
+    font-size: 2rem;
     line-height: 1;
   }
   .category {
@@ -56,6 +58,12 @@ const NoteTemplateWrapper = styled.article`
   }
   .body {
     margin-top: 2rem;
+  }
+  @media (min-width:768px) {
+    width: inherit;
+    h2{
+      font-size: 3rem;
+    }
   }
 `
 

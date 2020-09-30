@@ -50,12 +50,6 @@ const Wrapper = styled.blockquote`
     position: relative;
     margin: 2rem 0;
   }
-  @media (min-width: 1170px) {
-    .container {
-      margin-left: -2rem;
-      margin-right: -2rem;
-    }
-  }
   .icon {
     position: absolute;
     top: 0;
@@ -90,6 +84,7 @@ const Wrapper = styled.blockquote`
       column-gap: 2rem;
       align-items: center;
     }
+    display: flex;
     font-style: italic;
     color: var(--clr-grey-5);
     line-height: 1.8;
@@ -97,7 +92,7 @@ const Wrapper = styled.blockquote`
     font-size: 1.2rem;
     margin: 2rem 0;
     .quote-icon {
-      font-size: 4rem;
+      font-size: 3rem;
       color: var(--clr-primary-5);
     }
   }

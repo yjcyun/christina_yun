@@ -36,6 +36,7 @@ const NoteListTemplate = ({ data, pageContext }) => {
     <Layout>
       <SEO  title='Notes'/>
       <NotesWrapper className='p-1'>
+      <h1 className='page-title' style={{marginBottom:'1.5rem'}}>Notes</h1>
         {nodes.map((note, index) => {
           const { title, date, slug, category } = note.frontmatter;
           return (
@@ -49,6 +50,7 @@ const NoteListTemplate = ({ data, pageContext }) => {
           )
         })}
       </NotesWrapper>
+
       <Pagination className='p-1'>
         {/* PREV BUTTON */}
         <Link to={prevPage} className={!isFirst ? 'active navpages' : 'muted navpages'}>
