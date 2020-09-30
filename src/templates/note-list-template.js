@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
+import { IoMdArrowBack, IoMdArrowForward } from 'react-icons/io'
 import styled from 'styled-components';
 import Layout from '../components/Layout'
 
@@ -21,16 +22,18 @@ export const query = graphql`
 `
 
 const NoteListTemplate = ({ data, pageContext }) => {
-  const { currentPage, numPages } = pageContext;
+  const { currentPage, numOfPages } = pageContext;
   const isFirst = currentPage === 1;
-  const isLast = currentPage === numPages;
+  const isLast = currentPage === numOfPages;
 
   const prevPage = currentPage - 1 === 1 ? `/notes` : `/notes/${currentPage - 1}`;
-  const nextPage = `/blogs/${currentPage + 1}`;
+  const nextPage = `/notes/${currentPage + 1}`;
 
   const { notes: { nodes } } = data;
+
   return (
     <Layout>
+
       <NotesWrapper className='p-1'>
         {nodes.map((note, index) => {
           const { title, date, slug, category } = note.frontmatter;
@@ -45,11 +48,35 @@ const NoteListTemplate = ({ data, pageContext }) => {
           )
         })}
       </NotesWrapper>
+      <Pagination className='p-1'>
+        {/* PREV BUTTON */}
+        <Link to={prevPage} className={!isFirst ? 'active navpages' : 'muted navpages'}>
+          <span className='icon'><IoMdArrowBack /></span>
+          <span>Prev</span>
+        </Link>
+        {/* PAGES NUMBERS */}
+        <div className='page-numbers'>
+          {Array.from({ length: numOfPages }, (_, index) => {
+            return (
+              <Link
+                key={index}
+                to={`/notes/${index === 0 ? '' : index + 1}`}
+                className={index + 1 === currentPage ? 'active' : 'muted'}
+              >
+                {index + 1}
+              </Link>
+            )
+          })}
+        </div>
+        {/* NEXT BUTTON */}
+        <Link to={nextPage} className={!isLast ? 'active navpages' : 'muted navpages'}>
+          <span>Next</span>
+          <span className='icon'><IoMdArrowForward /></span>
+        </Link>
+      </Pagination>
     </Layout>
   )
 }
-
-
 
 const NotesWrapper = styled.div`
   .note-li {
@@ -60,9 +87,39 @@ const NotesWrapper = styled.div`
     h2:hover {
       text-decoration: underline;
     }
-   
     p{
       margin-top: 8px
+    }
+  }
+`
+
+const Pagination = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .navpages {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  .navpages.muted{
+    pointer-events: none;
+  }
+  .icon {
+    vertical-align: middle;
+  }
+  .muted {
+    color: var(--grey-clr);
+  }
+  .active {
+    color: var(--accent-clr);
+  }
+  .page-numbers{
+    a{
+      margin: 0 0.5rem;
+    }
+    .active {
+      font-weight: 600;
     }
   }
 `
