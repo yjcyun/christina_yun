@@ -1,9 +1,9 @@
 :root {
   --max-width: 1170px;
-  --primary-ff: "Open Sans", sans-serif;
+  --primary-ff: 'Open Sans', sans-serif;
   --dark-clr: #333;
   --grey-clr: #a6a6a6;
-  --accent-clr:#2ac06e;
+  --accent-clr: #2ac06e;
 }
 /* GLOBAL STYLE */
 * {
@@ -30,6 +30,19 @@ li {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 2rem 0;
+}
+
+.p-1 {
+  padding: 1.5rem;
+}
+
+.small {
+  font-size: 0.9rem;
+}
+.category {
+  color: var(--accent-clr);
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
 @media screen and (min-width: 768px) {

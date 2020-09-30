@@ -20,7 +20,7 @@ exports.createPages = async ({ graphql, actions }) => {
       path: `/notes/${slug}`,
       component: path.resolve(`src/templates/note-template.js`),
       context: {
-        slug
+        slug,
       }
     })
   });

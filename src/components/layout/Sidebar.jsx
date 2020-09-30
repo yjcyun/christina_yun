@@ -5,7 +5,7 @@ import styled from 'styled-components'
 
 const Sidebar = () => {
   return (
-    <SidebarWrapper>
+    <SidebarWrapper className='p-1'>
       <TopWrapper>
         <h1>Christina Yun</h1>
         <p>Self-taught frontend developer documenting her learning experience and a dog lover.</p>
@@ -25,7 +25,6 @@ const Sidebar = () => {
 }
 
 const SidebarWrapper = styled.nav`
-  padding: 1.5rem;
   a {
     color: var(--dark-clr);
     text-transform: uppercase;
