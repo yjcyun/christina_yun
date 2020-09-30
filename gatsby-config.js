@@ -1,4 +1,12 @@
 module.exports = {
+  siteMetadata: {
+    title: `Christina Yun`,
+    description: `Frontend Web Developer With Passion🔥`,
+    titleTemplate: `%s | Christina Yun`,
+    url: `https://gatsby-mdx-blog-course-project.netlify.app/`,
+    image: `mainImg.png`,
+    twitterUsername: `@xtina_yun`,
+  },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
@@ -32,6 +40,10 @@ module.exports = {
           {
             family: `Open Sans`,
             variants: [`400`, `500`, `600`],
+          },
+          {
+            family: `Montserrat`,
+            variants: [`600`, `800`],
           },
         ],
       },

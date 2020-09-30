@@ -1,9 +1,18 @@
 :root {
   --max-width: 1170px;
   --primary-ff: 'Open Sans', sans-serif;
+  --secondary-ff: 'Montserrat', sans-serif;
   --dark-clr: #333;
   --grey-clr: #a6a6a6;
   --accent-clr: #2ac06e;
+  --clr-primary-1: hsl(245, 91%, 17%);
+  --clr-primary-5: hsl(245, 62%, 45%);
+  --clr-primary-10: hsl(245, 87%, 94%);
+  --clr-grey-1: hsl(209, 61%, 16%);
+  --clr-grey-5: hsl(210, 22%, 49%);
+  --clr-grey-10: hsl(206, 33%, 96%);
+  --clr-white: #fff;
+  --radius: 0.25rem;
 }
 /* GLOBAL STYLE */
 * {
@@ -31,7 +40,11 @@ li {
   margin: 0 auto;
   padding: 2rem 0;
 }
-
+.page-title {
+  font-family: var(--secondary-ff);
+  font-weight: 800;
+  font-size: 3rem;
+}
 .p-1 {
   padding: 1.5rem;
 }

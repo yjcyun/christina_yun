@@ -8,7 +8,7 @@ const Sidebar = () => {
     <SidebarWrapper className='p-1'>
       <TopWrapper>
         <h1>Christina Yun</h1>
-        <p>Self-taught frontend developer documenting her learning experience and a dog lover.</p>
+        <p>Self-taught frontend developer documenting her learning experience.</p>
       </TopWrapper>
       <NavLinks>
         <li><Link to='/'>portfolio</Link></li>

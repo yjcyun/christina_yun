@@ -3,6 +3,7 @@ import { graphql, Link } from 'gatsby'
 import { IoMdArrowBack, IoMdArrowForward } from 'react-icons/io'
 import styled from 'styled-components';
 import Layout from '../components/Layout'
+import SEO from '../components/SEO';
 
 export const query = graphql`
   query notesList($skip: Int!, $limit: Int!) {
@@ -33,7 +34,7 @@ const NoteListTemplate = ({ data, pageContext }) => {
 
   return (
     <Layout>
-
+      <SEO  title='Notes'/>
       <NotesWrapper className='p-1'>
         {nodes.map((note, index) => {
           const { title, date, slug, category } = note.frontmatter;

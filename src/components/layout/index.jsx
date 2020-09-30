@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Sidebar from './Sidebar'
 
-const index = ({ children }) => {
+const Layout = ({ children }) => {
   return (
     <LayoutWrapper className='page-center'>
       <Sidebar />
@@ -20,4 +20,4 @@ const LayoutWrapper = styled.div`
   }
 `
 
-export default index
+export default Layout
