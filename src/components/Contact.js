@@ -8,7 +8,15 @@ const Contact = () => {
       <p>If you have any questions or just want to say hi, drop me a message and we'll talk! I welcome critiques, comments, or suggestions you might have about my notes.</p>
 
       <ul>
-        <li><a href='mailto:christina5707@gmail.com' target='_blank' rel='noreferrer'><span role='img' aria-label='email' className='emoji'>📧</span>christina5707@gmail.com</a></li>
+        <li>
+          <a
+            href='mailto:christina5707@gmail.com'
+            target='_blank'
+            rel='noreferrer'
+          >
+            <span role='img' aria-label='email' className='emoji'>📧</span>christina5707@gmail.com
+          </a>
+        </li>
       </ul>
     </ContactWrapper>
   )

@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
-import { details } from './details'
+import { details } from './portfolio-constants'
 import { BsDot } from 'react-icons/bs'
 import { FaGithub } from 'react-icons/fa'
 import { FiExternalLink } from 'react-icons/fi'
@@ -25,39 +25,56 @@ const Portfolio = () => {
   const { portfolio: { nodes } } = useStaticQuery(query);
   return (
     <>
-      <h1 className='page-title' style={{padding:'1.5rem'}}>Portfolio</h1>
+      <h1 className='page-title' style={{ padding: '1.5rem' }}>Portfolio</h1>
       <PortfolioWrapper>
+        {/* ITERATE IMAGE FOLDER */}
         {nodes.map((node, index) => (
           <div className='grid-container' key={index}>
-            <a href={details[index].link} target='_blank' rel="noreferrer" className='img-container'>
+            <a
+              href={details[index].link}
+              target='_blank'
+              rel="noreferrer"
+              className='img-container'
+            >
               <Image
                 fluid={node.childImageSharp.fluid}
                 imgStyle={{ objectFit: 'contain' }}
                 style={{ maxHeight: '13rem' }}
               />
             </a>
-            <div className='project-det'>
-              <div className='name-github'>
+            {/* EACH IMAGE FOOTER */}
+            <div className='img-footer'>
+              {/* PROJECT TITLE & LINKS */}
+              <div className='img-header'>
                 <h3 className='project-name'>{details[index].name}</h3>
                 <div className='links'>
-                  <a href={details[index].github} target='_blank' rel="noreferrer">
+                  <a
+                    href={details[index].github}
+                    target='_blank'
+                    rel='noreferrer'
+                  >
                     <FaGithub />
                   </a>
-                  <a href={details[index].link} target='_blank' rel="noreferrer">
+                  <a
+                    href={details[index].link}
+                    target='_blank'
+                    rel='noreferrer'
+                  >
                     <FiExternalLink />
                   </a>
                 </div>
               </div>
+              {/* PROJECT STACKS */}
               <div className='stacks-container'>
                 {details[index].stacks.map((el, i) => (
-                  <p className='stacks' key={i}>
-                    <span>{el}</span>
-                    {i === details[index].stacks.length - 1
-                      ? <span></span>
-                      : <BsDot className='icon' />
-                    }
-                  </p>
-                ))}
+                    <p className='stacks' key={i}>
+                      <span>{el}</span>
+                      {i === details[index].stacks.length - 1
+                        ? <span></span>
+                        : <BsDot className='icon' />
+                      }
+                    </p>
+                  ))}
               </div>
             </div>
           </div>
@@ -74,11 +91,11 @@ const PortfolioWrapper = styled.section`
   .grid-container {
     margin-bottom: 4rem;
   }
-  .project-det {
+  .img-footer {
     max-width: 22rem;
     margin: 0 auto;
   }
-  .name-github {
+  .img-header {
     display: flex;
     justify-content: space-between;
     align-items: center;

@@ -1,6 +1,6 @@
+import React from 'react'
 import { Link } from 'gatsby'
 import { FaLinkedinIn, FaGithub } from 'react-icons/fa'
-import React, { useState } from 'react'
 import styled from 'styled-components'
 
 const links = [
@@ -11,8 +11,6 @@ const links = [
 ]
 
 const Sidebar = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
-
   return (
     <SidebarWrapper className='p-1'>
       <TopWrapper>
@@ -21,12 +19,28 @@ const Sidebar = () => {
       </TopWrapper>
       <NavLinks>
         {links.map((link, index) => (
-          <Link to={link.to} activeClassName='active'>{link.text}</Link>
+          <Link key={index} to={link.to} activeClassName='active'>{link.text}</Link>
         ))}
       </NavLinks>
       <SocialLinks>
-        <li><a href='https://github.com/yjcyun' target='_blank' rel='noreferrer'><FaGithub className='icon' /></a></li>
-        <li><a href='https://www.linkedin.com/in/xtina-yun/' target='_blank' rel='noreferrer'><FaLinkedinIn className='icon' /></a></li>
+        <li>
+          <a
+            href='https://github.com/yjcyun'
+            target='_blank'
+            rel='noreferrer'
+          >
+            <FaGithub className='icon' />
+          </a>
+        </li>
+        <li>
+          <a
+            href='https://www.linkedin.com/in/xtina-yun/'
+            target='_blank'
+            rel='noreferrer'
+          >
+            <FaLinkedinIn className='icon' />
+          </a>
+        </li>
       </SocialLinks>
       <div className='vertical-line'></div>
     </SidebarWrapper>
@@ -67,12 +81,12 @@ const TopWrapper = styled.div`
   }
   a{
     text-transform: capitalize;
-    h1 {
-      font-size: 1.3rem;
-    }
   }
   a:hover {
     color: var(--dark-color);
+  }
+  h1 {
+    font-size: 1.3rem;
   }
 `
 const NavLinks = styled.div`

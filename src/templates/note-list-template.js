@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql, Link } from 'gatsby'
 import { IoMdArrowBack, IoMdArrowForward } from 'react-icons/io'
 import styled from 'styled-components';
-import Layout from '../components/Layout'
+import Layout from '../components/layout/Layout';
 import SEO from '../components/SEO';
 
 export const query = graphql`

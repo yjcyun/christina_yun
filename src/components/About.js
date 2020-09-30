@@ -1,17 +1,20 @@
 import React from 'react'
 import styled from 'styled-components'
-import Layout from '../Layout'
+import Layout from './layout/Layout'
 
 const About = () => {
   return (
     <Layout>
       <AboutWrapper className='p-1'>
         <h1 className='page-title'>About Me</h1>
+        {/* INTRO PARAGRAPHS */}
         <p>Hello, thank you for visiting my site. This is where I document all my struggles of becoming a self-taught frontend developer.</p>
         <p>My name is Christina, a furmom of two dogs and one bunny living in Toronto, Canada. I used to work as a Registered Veterinary Technician but upon a lot of internal struggles and debates with myself, I decided quit my job and start being serious about web development.</p>
-        <p>Note: This website is not a blog but more of a notebook where I keep track of what I learn. </p>
+        {/* LANGUAGES */}
         <div className='section'>
-          <h3><span role='img' aria-label='heart' className='emoji'>⚙️</span> Languages-Frameworks-Libraries</h3>
+          <h3>
+            <span role='img' aria-label='heart' className='emoji'>⚙️</span> Languages-Frameworks-Libraries
+          </h3>
           <ul>
             <li>
               <span>Javascript</span> - there's a love-hate relationship since this is the very first language I learned(still learning). I struggled...and continue to struggle a lot.
@@ -35,10 +38,11 @@ const About = () => {
               <span>Node/Express</span> - I learned the basics so I can build my frontend <span role='img' aria-label='wink' className='emoji'>😉</span>
             </li>
             <li>
-              <span>MongoDB/Mongoose</span> - I would' like to know more
+              <span>MongoDB/Mongoose</span> - I would like to know more
             </li>
           </ul>
         </div>
+        {/* TO LEARN */}
         <div className='section'>
           <h3><span role='img' aria-label='heart' className='emoji'>📒</span> Techs to Learn</h3>
           <ul>
@@ -48,6 +52,7 @@ const About = () => {
             <li><span>Shopify</span></li>
           </ul>
         </div>
+        {/* HARDWARES I USE */}
         <div className='section'>
           <h3><span role='img' aria-label='computer' className='emoji'>💻</span> Hardware</h3>
           <p>My laptop and their friends:</p>
@@ -58,6 +63,7 @@ const About = () => {
             <li><span>Microsoft Explorer Touch Mouse</span> - donated by my boyfriend</li>
           </ul>
         </div>
+        {/* SOFTWARE PROGRAMS I USE */}
         <div className='section'>
           <h3><span role='img' aria-label='software' className='emoji'>👩‍💻</span> Software</h3>
           <p>Here are some some of the applications that I enjoy using:</p>
@@ -71,6 +77,7 @@ const About = () => {
             <li><span>MongoDB Compass</span></li>
           </ul>
         </div>
+        {/* WHERE DO I LEARN? */}
         <div className='section'>
           <h3><span role='img' aria-label='pencil' className='emoji'>✏️</span> Learning Platforms</h3>
           <ul>
