@@ -18,7 +18,7 @@ export const details = [
     name: 'Christina Yun v2',
     type: 'Portfolio',
     stacks: ['Gatsby', 'Styled-components'],
-    link: 'https://christinayun.ca',
+    link: 'https://christinayun-v2.netlify.app',
     github: 'https://github.com/yjcyun/react-christina-yun-v2'
   },
   {
