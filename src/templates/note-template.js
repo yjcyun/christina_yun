@@ -41,6 +41,7 @@ const NoteTemplate = ({ data }) => {
 const NoteTemplateWrapper = styled.article`
   width: 100vw;
   max-width: var(--max-width);
+  margin-bottom:5rem;
   h2 {
     margin-bottom: 0.8rem;
     font-size: 2rem;

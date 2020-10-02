@@ -4,10 +4,12 @@ const Code = ({ children }) => {
   return (
     <code
       style={{
-        background: '#ccc',
-        color: '#fff',
-        padding: '1rem',
+        background: '#F2F3F5',
+        color: 'tomato',
+        padding: '0.5rem',
         borderRadius: 'var(--radius)',
+        display: 'inline-block',
+        margin:'0.5rem 0'
       }}
     >
       {children}

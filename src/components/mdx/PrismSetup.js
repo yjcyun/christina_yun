@@ -35,7 +35,7 @@ const Pre = styled.pre`
   background: #1e1e1e;
   padding: 1rem 1.5rem;
   border-radius: var(--radius);
-  margin: 3rem 0;
+  margin: 2rem 0;
   font-size: 0.9rem;
   font-family: "Courier New", Courier, monospace;
   overflow-x: auto;
