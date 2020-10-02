@@ -1,0 +1,197 @@
+---
+title: MySQL CRUD Commands
+slug: mysql-crud-commands
+date: 2020-10-02
+category: MySQL
+---
+
+import { Link } from 'gatsby'
+
+Content is from [The Ultimate MySQL Bootcamp](https://www.udemy.com/course/the-ultimate-mysql-bootcamp-go-from-sql-beginner-to-expert) by Colt Steele on Udemy.
+
+Here it goes!
+
+<h3>DATABASES</h3>
+
+<p>To start CLI</p>
+
+`mysql-ctl cli;`
+
+<p>View available databases</p>
+
+`show databases;`
+
+<p>Create new database</p>
+
+`CREATE DATABASE database_name;`
+
+<p>Remove database</p>
+
+`DROP DATABASE database_name;`
+
+<p>Use/select database</p>
+
+`USE database_name;` `SELECT database();`
+
+<h3>TABLES</h3>
+
+<p>INT - a whole number</p>
+<p>VARCHAR(char length: 1 - 255) - a variable-length string</p>
+
+<p>Create a table</p>
+
+```MySQL
+
+CREATE TABLE cats
+  (
+    name VARCHAR(100),
+    age INT
+  );
+
+```
+
+<p>See if table was created </p>
+
+`SHOW TABLES;`
+
+<p>See the details of the table</p>
+
+`SHOW COLUMNS FROM cats;` `DESC cats;`
+
+<p>Delete a table</p>
+
+`DROP TABLE cats;`
+
+<p>Insert data into table</p> 
+
+`INSERT INTO cats(name, age) VALUES ('Jetson', 7);`
+
+<p>Insert multiple data</p>
+
+```MySQL
+INSERT INTO cats(name, age) 
+VALUES ('Jetson', 7),('Mars',3),('Chester',2);
+
+```
+
+<p>View all data</p>
+
+`SELECT * FROM cats;`
+
+<p>View the warning</p>
+
+`SHOW WARNINGS;`
+
+<p>Define null/not null</p>
+
+```MySQL
+
+CREATE TABLE cats2
+(
+  name VARCHAR(100) NOT NULL,
+  age INT NOT NULL
+);
+
+```
+
+<h4>Combine default values and define null</h4>
+
+```MySQL
+
+CREATE TABLE cats3
+(
+  name VARCHAR(100) NOT NULL DEFAULT 'unnamed',
+  age INT NOT NULL DEFAULT 99
+);
+
+```
+
+<h4>Add a primary key (unique id)</h4>
+
+```MySQL
+
+CREATE TABLE unique_cats
+(
+  cat_id INT NOT NULL,
+  name VARCHAR(100),
+  age INT,
+  PRIMARY KEY(cat_id)
+);
+
+```
+
+<h4>Exercise</h4>
+
+```MySQL
+CREATE TABLE employees (
+  id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+  first_name VARCHAR(50) NOT NULL,
+  last_name VARCHAR(50) NOT NULL,
+  middle_name VARCHAR(50),
+  age INT NOT NULL,
+  current_status VARCHAR(255) NOT NULL DEFAULT 'employed'
+);
+
+```
+
+<h3>CRUD: Create data</h3>
+
+```MySQL
+CREATE TABLE cats 
+  ( 
+     cat_id INT NOT NULL AUTO_INCREMENT, 
+     name   VARCHAR(100), 
+     breed  VARCHAR(100), 
+     age    INT, 
+     PRIMARY KEY (cat_id) 
+  ); 
+
+INSERT INTO cats(name, breed, age) 
+VALUES ('Ringo', 'Tabby', 4),
+       ('Cindy', 'Maine Coon', 10),
+       ('Dumbledore', 'Maine Coon', 11),
+       ('Egg', 'Persian', 4),
+       ('Misty', 'Tabby', 13),
+       ('George Michael', 'Ragdoll', 9),
+       ('Jackson', 'Sphynx', 7);
+
+```
+
+<h3>CRUD: Read data</h3>
+<h4>SELECT</h4>
+
+<p>* selects all the columns from the table</p>
+
+`SELECT * FROM cats;` 
+`SELECT name FROM cats;` 
+`SELECT age FROM cats;` 
+`SELECT age, name FROM cats;` 
+
+<h4>WHERE</h4>
+<p>Selecting by a specific column</p>
+
+`SELECT * FROM cats WHERE age=4;`
+`SELECT * FROM cats WHERE name='Egg';`
+`SELECT cat_id, age FROM cats WHERE cat_id=age; `
+
+<h4>Aliases</h4>
+<p>Giving a column name an alias</p>
+
+`SELECT cat_id AS id, name FROM cats;`
+
+<h3>CRUD: Update data</h3>
+
+`UPDATE cats SET breed='Shorthair' WHERE breed='Tabby';`
+
+<h3>CRUD: Delete data</h3>
+
+`DELETE FROM cats WHERE name='Egg';`
+
+<p>This is will all the cats from the cat table</p>
+
+`DELETE FROM cats;`
+
+<p>...while DROP will delete the entire table itself
+</p>
+
+`DROP TABLE cats`

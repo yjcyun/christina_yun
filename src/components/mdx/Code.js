@@ -9,7 +9,7 @@ const Code = ({ children }) => {
         padding: '0.5rem',
         borderRadius: 'var(--radius)',
         display: 'inline-block',
-        margin:'0.5rem 0'
+        margin:'0'
       }}
     >
       {children}

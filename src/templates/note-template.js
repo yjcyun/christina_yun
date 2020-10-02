@@ -20,7 +20,7 @@ export const query = graphql`
 `
 
 const NoteTemplate = ({ data }) => {
-  const { note: { frontmatter: { title, category, date }, body } } = data
+  const { note: { frontmatter: { title, category, date }, body } } = data;
 
   return (
     <Layout>
@@ -46,6 +46,11 @@ const NoteTemplateWrapper = styled.article`
     margin-bottom: 0.8rem;
     font-size: 2rem;
     line-height: 1;
+  }
+  h3 {
+    font-size: 1.6rem;
+    padding-top: 2rem;
+    font-family: var(--secondary-ff);
   }
   .category {
     color: var(--accent-clr);
