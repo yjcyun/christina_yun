@@ -58,6 +58,17 @@ const NoteTemplateWrapper = styled.article`
   .body {
     margin-top: 2rem;
   }
+  ul {
+    margin-left: 2rem;
+  }
+  li {
+    list-style: square;
+    margin: 0.5rem 0;
+  }
+  a{
+    color: var(--clr-grey-5);
+    box-shadow: rgba(42, 192, 110, 1) 0px -2px inset;
+  }
   @media (min-width:768px) {
     width: inherit;
     h2{
