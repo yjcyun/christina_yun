@@ -20,31 +20,6 @@ const query = graphql`
   }
 `
 
-const stackColor = stack => {
-  switch (stack) {
-    case 'HTML':
-      return <span style={{ color: '#22a6b3' }}>{stack}</span>;
-    case 'CSS':
-      return <span style={{ color: 'rgb(62, 84, 163)' }}>{stack}</span>;
-    case 'JS':
-      return <span style={{ color: '#fdcb6e' }}>{stack}</span>;
-    case 'React':
-      return <span style={{ color: '#30336b' }}>{stack}</span>;
-    case 'Styled-Components':
-      return <span style={{ color: '#f0932b' }}>{stack}</span>;
-    case 'Gatsby':
-      return <span style={{ color: '#4834d4' }}>{stack}</span>;
-    case 'Node':
-      return <span style={{ color: '#27ae60' }}>{stack}</span>;
-    case 'Express':
-      return <span style={{ color: '#16a085' }}>{stack}</span>;
-    case 'MongoDB':
-      return <span style={{ color: '#8e44ad' }}>{stack}</span>;
-    default:
-      return <span style={{ color: '#fdcb6e' }}>JS</span>
-  }
-}
-
 const Portfolio = () => {
   const { portfolio: { nodes } } = useStaticQuery(query);
   return (
@@ -65,7 +40,7 @@ const Portfolio = () => {
               <div className='stacks-container'>
                 {details[index].stacks.map((el, i) => (
                   <p className='stacks' key={i}>
-                    {stackColor(el)}
+                    <span>{el}</span>
                   </p>
                 ))}
               </div>
@@ -149,6 +124,7 @@ const PortfolioWrapper = styled.section`
     span {
       font-weight: 600;
       margin-right: 0.5rem;
+      color: var(--grey-clr);
     }
   }
   .icon {

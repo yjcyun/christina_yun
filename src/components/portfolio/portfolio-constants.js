@@ -1,6 +1,12 @@
 export const details = [
   {
-    name: 'Restaurant website ',
+    name: 'Frontend mentor challenges',
+    stacks: ['HTML', 'CSS', 'JS'],
+    link: 'https://root-page.vercel.app/',
+    github: 'https://github.com/yjcyun/Frontend-Mentor-Challenges'
+  },
+  {
+    name: 'Restaurant website',
     type: 'Restaurant',
     stacks: ['React', 'Styled-Components'],
     link: 'https://vecaf.netlify.app',
