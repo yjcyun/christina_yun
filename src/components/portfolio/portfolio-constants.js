@@ -1,78 +1,79 @@
 export const details = [
   {
-    name: 'Vecaf',
+    name: 'Restaurant website ',
     type: 'Restaurant',
-    stacks: ['React', 'Styled-components'],
+    stacks: ['React', 'Styled-Components'],
     link: 'https://vecaf.netlify.app',
     github: 'https://github.com/yjcyun/VeCaf'
   },
   {
-    name: 'ReactFit & Co.',
+    name: 'Full stack e-commerce',
     type: 'E-commerce',
-    stacks: ['React', 'Redux', 'Styled-components', 'Node', 'Express', 'MongoDB'],
+    stacks: ['React', 'Redux', 'Styled-Components', 'Node', 'Express', 'MongoDB'],
     link: 'https://reactfitandco.herokuapp.com',
     github: 'https://github.com/yjcyun/ReactFit'
 
   },
   {
-    name: 'Christina Yun v2',
+    name: 'Personal portfolio version 2',
     type: 'Portfolio',
-    stacks: ['Gatsby', 'Styled-components'],
+    stacks: ['Gatsby', 'Styled-Components'],
     link: 'https://christinayun-v2.netlify.app',
     github: 'https://github.com/yjcyun/react-christina-yun-v2'
   },
   {
-    name: 'Alex Leung',
+    name: 'Alex Leung-personal portfolio',
     type: 'Portfolio',
-    stacks: ['React', 'Styled-components'],
+    stacks: ['React', 'Styled-Components'],
     link: 'https://alexleung.ca',
     github: 'https://github.com/yjcyun/Alex-Leung-v2'
   },
   {
-    name: 'Heather Dick',
+    name: 'Portfolio resume with blog',
     type: 'Portfolio, Blog',
-    stacks: ['Gatsby', 'Styled-components', 'Strapi'],
+    stacks: ['Gatsby', 'Styled-Components', 'Strapi'],
     link: 'https://heatherdick.ca',
     github: 'https://github.com/yjcyun/heather_dick_portfolio'
   },
   {
-    name: 'Christina Yun v1',
+    name: 'Personal portfolio version 1',
     type: 'Portfolio',
-    stacks: ['React', 'Styled-components'],
+    stacks: ['React', 'Styled-Components'],
     link: 'https://christinayun.netlify.app',
     github: 'https://github.com/yjcyun/react-christina-yun-v1'
   },
   {
-    name: 'Thread & Needle',
+    name: 'Fabric e-commerce',
     type: 'E-commerce',
-    stacks: ['React', 'Styled-compoennts', 'Contentful'],
+    stacks: ['React', 'Styled-Components', 'Contentful'],
     link: 'https://threadandneedle.netlify.app',
     github: 'https://github.com/yjcyun/react_fabric_store'
   },
   {
-    name: 'Adopt Dog',
+    name: 'Search adoptable dogs',
     type: 'Humane Society',
-    stacks: ['React', 'Styled-components', 'Contentful'],
+    stacks: ['React', 'Styled-Components', 'Contentful'],
     link: 'https://react-adopt-dog.netlify.app',
     github: 'https://github.com/yjcyun/react_adopt_dog'
   },
   {
-    name: 'Flags',
+    name: 'Flags API',
     type: 'App',
     stacks: ['React', 'CSS'],
     link: 'https://yjcyun.github.io/Country-Flags',
     github: 'https://github.com/yjcyun/Country-Flags'
   },
   {
-    name: 'Dog Inn Landing Page',
+    name: 'Dog hotel landing page',
     type: 'Business',
-    stacks: ['Javscript', 'HTML', 'CSS'],
-    link: 'https://yjcyun.github.io/Dog-Inn-Landing-Page', github: 'https://github.com/yjcyun/Dog-Inn-Landing-Page'
+    stacks: ['JS', 'HTML', 'CSS'],
+    link: 'https://yjcyun.github.io/Dog-Inn-Landing-Page', 
+    github: 'https://github.com/yjcyun/Dog-Inn-Landing-Page'
   },
   {
-    name: 'Plantiful',
+    name: 'Plants e-commerce',
     type: 'Business',
-    stacks: ['Javscript', 'HTML', 'CSS'],
+    stacks: ['JS', 'HTML', 'CSS'],
     link: 'https://yjcyun.github.io/Plantiful_plants_store',
     github: 'https://github.com/yjcyun/Plantiful_plants_store'
   }

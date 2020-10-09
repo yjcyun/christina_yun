@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
 :root {
   --max-width: 1170px;
-  --primary-ff: 'Open Sans', sans-serif;
+  --primary-ff: 'Poppins', sans-serif;
   --secondary-ff: 'Montserrat', sans-serif;
   --dark-clr: #333;
   --grey-clr: #a6a6a6;

@@ -38,10 +38,6 @@ module.exports = {
       options: {
         fonts: [
           {
-            family: `Open Sans`,
-            variants: [`400`, `500`, `600`],
-          },
-          {
             family: `Montserrat`,
             variants: [`600`, `800`],
           },
