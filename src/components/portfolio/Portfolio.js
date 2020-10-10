@@ -1,8 +1,6 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import { details } from './portfolio-constants'
-import { FaGithub } from 'react-icons/fa'
-import { FiExternalLink } from 'react-icons/fi'
 import styled from 'styled-components'
 import Image from 'gatsby-image'
 

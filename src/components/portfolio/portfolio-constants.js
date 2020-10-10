@@ -1,5 +1,11 @@
 export const details = [
   {
+    name: 'Collection of JS challenges',
+    stacks: ['HTML', 'CSS', 'JS'],
+    link: 'https://js-challenges.vercel.app/',
+    github: 'https://github.com/yjcyun/Javscript-Challenges'
+  },
+  {
     name: 'Frontend mentor challenges',
     stacks: ['HTML', 'CSS', 'JS'],
     link: 'https://root-page.vercel.app/',
