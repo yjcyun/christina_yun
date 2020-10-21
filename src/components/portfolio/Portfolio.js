@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql, Link, useStaticQuery } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby'
 import { details } from './portfolio-constants'
 import styled from 'styled-components'
 import Image from 'gatsby-image'

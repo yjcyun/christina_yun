@@ -3,7 +3,7 @@ module.exports = {
     title: `Christina Yun`,
     description: `Frontend Web Developer With Passion🔥`,
     titleTemplate: `%s | Christina Yun`,
-    url: `https://gatsby-mdx-blog-course-project.netlify.app/`,
+    url: `https://christinayun.ca`,
     image: `mainImg.png`,
     twitterUsername: `@xtina_yun`,
   },
@@ -18,21 +18,8 @@ module.exports = {
         path: `${__dirname}/src/assets`,
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `posts`,
-        path: `${__dirname}/src/posts`,
-      },
-    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-plugin-mdx`,
-      options: {
-        gatsbyRemarkPlugins: [{ resolve: 'gatsby-remark-images' }],
-      },
-    },
     {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
