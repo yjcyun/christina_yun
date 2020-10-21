@@ -5,7 +5,7 @@ import styled from 'styled-components'
 
 const links = [
   { to: '/', text: 'portfolio' },
-  { to: '/notes', text: 'notes' },
+  // { to: '/notes', text: 'notes' },
   { to: '/about', text: 'about' },
   { to: '/contact', text: 'contact' },
 ]
@@ -15,7 +15,7 @@ const Sidebar = () => {
     <SidebarWrapper className='p-1'>
       <TopWrapper>
         <Link to='/'><h1>Christina Yun</h1></Link>
-        <p>Self-taught frontend developer documenting her learning experience.</p>
+        <p>Self-taught frontend developer documenting her learning experience. <br/>🐾🌱👩‍💻 </p>
       </TopWrapper>
       <NavLinks>
         {links.map((link, index) => (

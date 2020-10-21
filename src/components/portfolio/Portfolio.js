@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
+import { graphql, Link, useStaticQuery } from 'gatsby'
 import { details } from './portfolio-constants'
 import styled from 'styled-components'
 import Image from 'gatsby-image'
@@ -21,17 +21,22 @@ const query = graphql`
 const Portfolio = () => {
   const { portfolio: { nodes } } = useStaticQuery(query);
   return (
-    <>
-      <h1 className='page-title' style={{ padding: '1.5rem 0' }}>Portfolio</h1>
-      <PortfolioWrapper>
+    <section className='p-1'>
+      <h1 className='page-title'>Portfolio</h1>
+      <PortfolioGrid className='text'>
         {/* ITERATE IMAGE FOLDER */}
         {nodes.map((node, index) => (
           <div className='grid-container' key={index}>
-            <div className='img-container'>
-              <Image
-                fluid={node.childImageSharp.fluid}
-              />
-            </div>
+            <a href={details[index].link}
+              target='_blank'
+              rel='noreferrer'
+            >
+              <div className='img-container'>
+                <Image
+                  fluid={node.childImageSharp.fluid}
+                />
+              </div>
+            </a>
             {/* EACH IMAGE FOOTER */}
             <div className='img-footer'>
               {/* PROJECT STACKS */}
@@ -67,15 +72,14 @@ const Portfolio = () => {
             </div>
           </div>
         ))}
-      </PortfolioWrapper>
-    </>
+      </PortfolioGrid>
+    </section>
   )
 }
 
-const PortfolioWrapper = styled.section`
+const PortfolioGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
-  padding: 1rem;
   grid-column-gap: 2rem;
 
   .grid-container {
@@ -84,9 +88,9 @@ const PortfolioWrapper = styled.section`
     box-shadow:0 0.5rem 1.5rem 0 rgba(0, 0, 0, 0.1);
   }
 
-.img-container {
-  transition: all 0.3s;
-}
+  .img-container {
+    transition: all 0.3s;
+  }
   .img-container:hover {
     transform: scale(0.95);
   }
@@ -130,11 +134,6 @@ const PortfolioWrapper = styled.section`
     font-size: 1.1rem;
     padding-bottom: 3px;
     color: var(--accent-clr);
-  }
-  @media (min-width: 768px) {
-    padding: 0;
-    padding-top: 1.5rem;
-
   }
 `
 
