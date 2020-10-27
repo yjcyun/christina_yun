@@ -5,7 +5,6 @@ import styled from 'styled-components'
 
 const links = [
   { to: '/', text: 'portfolio' },
-  // { to: '/notes', text: 'notes' },
   { to: '/about', text: 'about' },
   { to: '/contact', text: 'contact' },
 ]
@@ -83,7 +82,7 @@ const TopWrapper = styled.div`
     text-transform: capitalize;
   }
   a:hover {
-    color: var(--dark-color);
+    color: var(--black);
   }
   h1 {
     font-size: 1.3rem;
@@ -115,6 +114,10 @@ const SocialLinks = styled.ul`
     .icon {
       vertical-align: middle;
       margin-bottom: 3px;
+      transition: 0.2s;
+    }
+    :hover .icon {
+      color: var(--accent-clr);
     }
   }
 `
