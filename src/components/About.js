@@ -106,7 +106,7 @@ const AboutWrapper = styled.section`
     li{
       margin: 5px 0;
       span {
-        box-shadow: rgba(42, 192, 110, 1) 0px -2px inset
+        box-shadow: rgba(42, 192, 110, 1) 0px -2px inset;
       }
       .emoji {
         box-shadow: none;

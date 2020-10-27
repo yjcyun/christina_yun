@@ -35,9 +35,7 @@ a {
 li {
   list-style: none;
 }
-h2 {
-  font-family: var(--secondary-ff);
-}
+
 
 /* CUSTOM STYLE */
 .page-center {
