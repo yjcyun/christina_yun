@@ -27,7 +27,7 @@
     "featured": true
   },
   {
-    "name": "Christina Yun",
+    "name": "Christina Yun v1",
     "desc": "personal portfolio",
     "stacks": ["React", "Styled-Components"],
     "link": "https://christinayun.netlify.app",

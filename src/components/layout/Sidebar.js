@@ -66,7 +66,7 @@ const SidebarWrapper = styled.nav`
     }
   }
   a {
-    color: var(--dark-clr);
+    color: var(--black);
     text-transform: uppercase;
     transition: 0.3s all;
   }

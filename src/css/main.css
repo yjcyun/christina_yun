@@ -4,16 +4,10 @@
   --max-width: 1170px;
   --primary-ff: 'Poppins', sans-serif;
   --secondary-ff: 'Montserrat', sans-serif;
-  --dark-clr: #333;
+  --black: #333;
   --grey-clr: #a6a6a6;
   --accent-clr: #2ac06e;
-  --clr-primary-1: hsl(245, 91%, 17%);
-  --clr-primary-5: hsl(245, 62%, 45%);
-  --clr-primary-10: hsl(245, 87%, 94%);
-  --clr-grey-1: hsl(209, 61%, 16%);
-  --clr-grey-5: hsl(210, 22%, 49%);
-  --clr-grey-10: hsl(206, 33%, 96%);
-  --clr-white: #fff;
+  --white: #fff;
   --radius: 0.25rem;
 }
 /* GLOBAL STYLE */
@@ -29,13 +23,30 @@ body {
 
 a {
   text-decoration: none;
-  color: var(--dark-clr);
+  color: var(--black);
 }
 
 li {
   list-style: none;
 }
 
+button {
+  background: var(--accent-clr);
+  color: var(--white);
+  border: 2px solid var(--accent-clr);
+  cursor: pointer;
+  font-family: var(--primary-ff);
+  outline: none;
+  padding: 1rem;
+  transition: 0.2s ease;
+  border-radius: var(--radius);
+}
+
+button:hover {
+  background: var(--white);
+  color: var(--black);
+  border: 2px solid var(--accent-clr);
+}
 
 /* CUSTOM STYLE */
 .page-center {
@@ -61,6 +72,7 @@ li {
 .small {
   font-size: 0.9rem;
 }
+
 .category {
   color: var(--accent-clr);
   text-transform: uppercase;

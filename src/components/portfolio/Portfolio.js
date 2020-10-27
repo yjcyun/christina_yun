@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { graphql, useStaticQuery } from 'gatsby'
 import PortfolioCard from './PortfolioCard'
+import { useState } from 'react'
 
 export const query = graphql`
   {
@@ -27,6 +28,13 @@ export const query = graphql`
 `
 
 const Portfolio = () => {
+  const [cardsToShow, setCardsToShow] = useState(6);
+
+  // handle 'load more' button
+  const handleShowMoreCards = () => {
+    setCardsToShow(prevVisiblePost => prevVisiblePost + 6);
+  }
+
   const { allProjectsJson: { nodes } } = useStaticQuery(query);
 
   return (
@@ -46,12 +54,16 @@ const Portfolio = () => {
       <PortfolioGrid className='text'>
         {nodes
           .filter(el => el.featured === false)
+          .slice(0, cardsToShow)
           .map((el, index) => (
             <div className='grid-container' key={index}>
               <PortfolioCard data={el} />
             </div>
           ))}
       </PortfolioGrid>
+      <div className='btn-container'>
+        <button onClick={handleShowMoreCards}>Load More</button>
+      </div>
     </PortfolioWrapper>
   )
 }
@@ -59,6 +71,9 @@ const Portfolio = () => {
 const PortfolioWrapper = styled.section`
   h2 {
     margin-top: 2rem;
+  }
+  .btn-container {
+    text-align: center;
   }
 `
 
