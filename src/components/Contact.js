@@ -11,8 +11,9 @@ const Contact = () => {
             href='mailto:christina5707@gmail.com'
             target='_blank'
             rel='noreferrer'
+            style={{fontSize:'1.2rem'}}
           >
-            <span role='img' aria-label='email' className='emoji'>📧</span>christina5707@gmail.com
+            <span role='img' aria-label='email' className='emoji' >📧</span>christina5707@gmail.com
           </a>
         </li>
       </ul>

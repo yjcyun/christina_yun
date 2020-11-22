@@ -48,20 +48,21 @@ const Sidebar = () => {
 
 const SidebarWrapper = styled.nav`
   position: relative;
+  font-size: 1.1rem;
   .vertical-line{
     width: 100%;
     height: 1px;
-    margin-top: 2rem;
     background-color: #ececec;
+    margin: 2rem 0;
   }
-  @media(min-width:768px) {
+  @media(min-width:996px) {
     .vertical-line{
-      margin-top: 0;
       position: absolute;
-      top: 1.5rem;
+      top: 0;
       right: 0;
       width: 1px;
       height: 25rem;
+      margin: 0;
     }
   }
   a {

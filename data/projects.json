@@ -15,7 +15,7 @@
     "link": "https://christinayun-v2.netlify.app",
     "github": "https://github.com/yjcyun/react-christina-yun-v2",
     "thumbnail": "./images/christinayunv2.png",
-    "featured": true
+    "featured": false
   },
   {
     "name": "Alex Leung",
@@ -24,7 +24,7 @@
     "link": "https://alexleung.ca",
     "github": "https://github.com/yjcyun/Alex-Leung-v2",
     "thumbnail": "./images/alexleung.png",
-    "featured": true
+    "featured": false
   },
   {
     "name": "Christina Yun v1",
@@ -33,7 +33,7 @@
     "link": "https://christinayun.netlify.app",
     "github": "https://github.com/yjcyun/react-christina-yun-v1",
     "thumbnail": "./images/christinayunv1.png",
-    "featured": true
+    "featured": false
   },
   {
     "name": "Vecaf",
@@ -51,7 +51,7 @@
     "link": "https://reactfitandco.herokuapp.com",
     "github": "https://github.com/yjcyun/ReactFit",
     "thumbnail": "./images/reactfitandco.png",
-    "featured": false
+    "featured": true
   },
   {
     "name": "Thread & Needle",
@@ -60,7 +60,7 @@
     "link": "https://threadandneedle.netlify.app",
     "github": "https://github.com/yjcyun/react_fabric_store",
     "thumbnail": "./images/threadandneedle.png",
-    "featured": false
+    "featured": true
   },
   {
     "name": "Adopt Dog",

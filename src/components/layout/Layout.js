@@ -14,9 +14,12 @@ const Layout = ({ children }) => {
 const LayoutWrapper = styled.div`
   display: grid;
 
-  @media(min-width:768px) {
+  @media(min-width:996px) {
     grid-template-columns: 1fr 3fr;
     grid-gap: 2rem;
+  }
+  @media(min-width: 1200px) {
+    grid-template-columns: 1fr 4fr;
   }
 `
 
