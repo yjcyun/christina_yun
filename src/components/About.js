@@ -6,7 +6,7 @@ const About = () => {
     <AboutWrapper className='p-1'>
       <h1 className='page-title'>About Me</h1>
       {/* INTRO PARAGRAPHS */}
-      <p className='text'>Hello, thank you for visiting my site. This is where I document all my struggles of becoming a frontend developer.</p>
+      <p className='text'>Hello, thank you for visiting my site. This is where I share my journey of becoming a frontend developer.</p>
       <div className='section'>
         <h2>
           <span role='img' aria-label='woman' className='emoji'>👩‍💻</span> Who am I?
@@ -39,7 +39,7 @@ const About = () => {
             <span>Styled-components</span>
           </li>
           <li>
-            <span>HTML / CSS</span>
+            <span>HTML/CSS</span>
           </li>
           <li>
             <span>Node/Express</span>
@@ -51,7 +51,7 @@ const About = () => {
             <span>mySQL</span>
           </li>
           <li>
-            <span>Typescript & Jest, Enzyme</span> - comming soon!
+            <span>Typescript & Jest, Enzyme</span> - coming soon!
             </li>
         </ul>
       </div>
@@ -60,7 +60,7 @@ const About = () => {
         <h2>
           <span role='img' aria-label='heart' className='emoji'>💗</span> Anything else?
           </h2>
-        <p className='text'>I am a dog person and I like eating plants (and Bahn mi).</p>
+        <p className='text'>I am a dog person and I like Bahn mi.</p>
       </div>
 
     </AboutWrapper>
