@@ -10,6 +10,7 @@ module.exports = {
       beige1: '#fffffe',
       beige2: '#f8f5f2',
       babypurple: '#b8c1ec',
+      babypink: '#feefe8',
       pink: '#eebbc3',
       indigo: '#121629',
     },
