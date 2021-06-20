@@ -13,7 +13,7 @@ const Navigation: React.FC = () => {
       <nav>
         <ul className='flex'>
           {navItems.map((nav) => (
-            <li className='ml-4 font-bold' key={nav.label}>
+            <li className='ml-4 font-bold text-2xl' key={nav.label}>
               <Link href={nav.link}>{nav.label}</Link>
             </li>
           ))}

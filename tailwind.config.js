@@ -7,6 +7,7 @@ module.exports = {
       black: '#000',
       white: '#fff',
       navy: '#232946',
+      darknavy: '#232323',
       beige1: '#fffffe',
       beige2: '#f8f5f2',
       babypurple: '#b8c1ec',
@@ -17,6 +18,9 @@ module.exports = {
     extend: {
       fontFamily: {
         cursive: ['ChristmasClassically'],
+      },
+      inset: {
+        26: '6.5rem',
       },
     },
   },

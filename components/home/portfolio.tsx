@@ -6,7 +6,7 @@ import PortfolioCard from '../portfolio/portfolio-card';
 const Portfolio: React.FC = () => {
   return (
     <section className='bg-beige1'>
-      <div className='container mx-auto max-w-5xl px-8 xl:px-0 py-40 relative'>
+      <div className='container mx-auto max-w-5xl px-8 xl:px-0 pt-40 pb-24 relative'>
         <SectionTitle
           pretitle='portfolio'
           title="Here's some of what I've built."
@@ -41,7 +41,7 @@ const Portfolio: React.FC = () => {
         </div>
         <div className='mt-16 text-center'>
           <Link href='/portfolio'>
-            <button className='rounded py-4 px-8 bg-pink'>View More</button>
+            <button className='py-4 px-8 bg-pink'>View More</button>
           </Link>
         </div>
       </div>
