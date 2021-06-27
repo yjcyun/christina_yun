@@ -6,3 +6,26 @@
   font-family: ChristmasClassically;
   src: url(../public/fonts/Christmas-Classically.otf) format('opentype');
 }
+
+.content-height {
+  height: calc(100vh - 8rem);
+  min-height: 700px;
+}
+
+.underline {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: theme('colors.babypurple');
+}
+
+.underline:hover {
+  text-decoration-color: #909ee1;
+}
+
+.text-shadow {
+  text-shadow: -5px 3px 0px theme('colors.purple');
+}
+
+.image-frame {
+  max-width: 550px;
+}

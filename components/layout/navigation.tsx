@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 const navItems = [
   { label: 'Portfolio', link: '/portfolio' },
@@ -8,12 +9,16 @@ const navItems = [
 
 const Navigation: React.FC = () => {
   return (
-    <header className='container mx-auto max-w-5xl px-8 xl:px-0 flex justify-between items-center h-32'>
-      <div className='font-bold uppercase'>christina yun</div>
+    <header className='w-36 flex-col items-center h-screen fixed px-4 pt-4'>
+      <Link href='/'>
+        <a href='' className='cursor=pointer'>
+          <Image src='/images/logo.png' width={100} height={60} />
+        </a>
+      </Link>
       <nav>
-        <ul className='flex'>
+        <ul className='flex flex-col'>
           {navItems.map((nav) => (
-            <li className='ml-4 font-bold text-2xl' key={nav.label}>
+            <li className=' font-bold text-2xl' key={nav.label}>
               <Link href={nav.link}>{nav.label}</Link>
             </li>
           ))}

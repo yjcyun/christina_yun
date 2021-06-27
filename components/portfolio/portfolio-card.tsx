@@ -2,56 +2,53 @@ import Image from 'next/image';
 
 type PortfolioCardProps = {
   title: string;
+  desc: string;
   image: string;
-  builtwith: string[];
   live: string;
   github: string;
-  id: number;
+  reverse?: boolean;
 };
 const PortfolioCard: React.FC<PortfolioCardProps> = ({
   title,
+  desc,
   image,
-  builtwith,
   live,
   github,
-  id,
 }) => {
   return (
-    <div className='bg-beige2'>
-      <div className='p-6'>
-        <div className='flex justify-between items-center'>
-          <h3 className='text-3xl font-bold'>{title}</h3>
-          <div>
-            <a href={github} className='ml-4'>
-              Github
-            </a>
-            <a href={live} className='ml-4'>
-              Live
+    <div className='content-height flex items-center'>
+      <div className='h-80vh w-full flex justify-between items-center'>
+        <div className='w-3/5'>
+          <div className='w-auto h-auto border-8 border-navy mr-20'>
+            <a href=''>
+              <Image
+                src='/images/projects/project1.jpg'
+                alt='Illustration of a laptop and a cup of tea'
+                layout='intrinsic'
+                width={600}
+                height={350}
+              />
             </a>
           </div>
         </div>
-
-        <div>
-          <Image
-            src='/images/projects/design.png'
-            alt='Illustration of a laptop and a cup of tea'
-            layout='intrinsic'
-            width={600}
-            height={450}
-          />
-        </div>
-
-        <div>
-          <h4 className='font-bold mb-2'>Tools Used</h4>
-          <div className='flex'>
-            {builtwith.map((stack) => (
-              <span
-                className='py-1 px-2 rounded-sm bg-navy font-semibold text-babypurple mr-2'
-                key={stack}
-              >
-                {stack}
-              </span>
-            ))}
+        <div className='w-2/5  ml-16'>
+          <h3 className='text-7xl font-bold flex-1 uppercase text-shadow'>
+            {title}
+          </h3>
+          <p className='text-3xl  mt-10 mb-16'>{desc}</p>
+          <div>
+            <a
+              href={github}
+              className='text-lg font-bold mr-4 border-4 border-darknavy py-3 px-6'
+            >
+              Github
+            </a>
+            <a
+              href={live}
+              className='text-lg font-bold mr-4 border-4 border-darknavy py-3 px-6 bg-darknavy text-beige1'
+            >
+              Live
+            </a>
           </div>
         </div>
       </div>

@@ -30,29 +30,14 @@ const About = () => {
               pretitle='check out'
               title='My favorite things:'
               justify='left'
-            >
-              <div className='absolute top-0 -right-36'>
-                <Image
-                  src='/images/fireworks.gif'
-                  alt='Animation of fireworks'
-                  layout='fixed'
-                  width={200}
-                  height={200}
-                />
-              </div>
-            </SectionTitle>
+            ></SectionTitle>
             <ul className='max-w-xl mb-8'>
               <li className='text-3xl font-bold'>The Office.</li>
               <li className='text-3xl font-bold'>Vegan Bánh mì.</li>
               <li className='text-3xl font-bold'>Brandon Sanderson.</li>
-              <li className='text-3xl font-bold'>Planning.</li>
               <li className='text-3xl font-bold'>Bronte Creek.</li>
               <li className='text-3xl font-bold'>ReactJS.</li>
             </ul>
-
-            <Link href='/about'>
-              <button className='py-4 px-8 bg-pink'>Learn more</button>
-            </Link>
           </div>
         </div>
       </div>

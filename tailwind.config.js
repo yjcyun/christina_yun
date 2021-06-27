@@ -13,11 +13,19 @@ module.exports = {
       babypurple: '#b8c1ec',
       babypink: '#feefe8',
       pink: '#eebbc3',
+      orange: '#f25f4c',
+      purple: '#7f5af0',
       indigo: '#121629',
     },
     extend: {
       fontFamily: {
         cursive: ['ChristmasClassically'],
+      },
+      borderWidth: {
+        6: '6px',
+      },
+      height: {
+        '80vh': '80vh',
       },
       inset: {
         26: '6.5rem',

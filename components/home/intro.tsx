@@ -1,39 +1,47 @@
-import Image from 'next/image';
-import Link from 'next/link';
+import { motion } from 'framer-motion';
+
+const variantsSentence = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      delay: 0.5,
+      staggerChildren: 0.03,
+    },
+  },
+};
 
 const Intro: React.FC = () => {
   return (
-    <section className='flex w-full container mx-auto max-w-5xl px-8 xl:px-0 pt-10 pb-16'>
+    <section className='flex container mx-auto max-w-6xl px-8 xl:px-0 h-screen pb-3'>
       <div className='flex-1'>
-        <div className='md:max-w-md flex flex-col h-full justify-center'>
-          <p className='font-cursive transform -rotate-6 -translate-y-5 text-3xl'>
-            Hi, there
-          </p>
-          <h1 className='text-4xl lg:text-6xl font-extrabold mb-8'>
-            I'm Christina.
-          </h1>
-          <p className='text-2xl'>
-            I like building websites, learning new technologies and drinking
-            tea. Feel free to browse around and leave a message in my guestbook.
-          </p>
-          <div className='mt-8'>
-            <Link href='/portfolio'>
-              <button className='py-4 px-8 bg-pink'>See my work</button>
-            </Link>
-          </div>
+        <div className='max-w-2xl flex flex-col h-full justify-end'>
+          <motion.div
+            initial='hidden'
+            animate='visible'
+            variants={variantsSentence}
+          >
+            <h1 className='text-4xl lg:text-8xl font-extrabold mb-8'>
+              Hi there,
+              <br />
+              I'm Christina, a frontend developer in Toronto.
+            </h1>
+          </motion.div>
         </div>
       </div>
-      <div className='hidden md:flex flex-1 ml-8'>
-        <Image
-          src='/images/laptop-light.svg'
-          alt='Illustration of a laptop and a cup of tea'
+      <div className='hidden md:flex'>
+        {/* <Image
+          src='/images/me.png'
+          alt='Cartoonized version of Christina Yun'
           layout='intrinsic'
-          width={600}
-          height={400}
-        ></Image>
+          width={300}
+          height={300}
+          className='shadow rounded-full max-w-full h-auto align-middle border-none'
+        /> */}
       </div>
     </section>
   );
 };
-
 export default Intro;

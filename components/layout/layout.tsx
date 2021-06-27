@@ -1,5 +1,4 @@
 import Navigation from './navigation';
-import Footer from './footer';
 
 type LayoutProps = {
   children: React.ReactNode;
@@ -7,10 +6,9 @@ type LayoutProps = {
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
-    <div className='bg-beige2'>
+    <div>
       <Navigation />
-      <main>{children}</main>
-      <Footer />
+      <main className='ml-32'>{children}</main>
     </div>
   );
 };
