@@ -13,17 +13,17 @@ const variantsSentence = {
   },
 };
 
-const Intro: React.FC = () => {
+const Intro = () => {
   return (
-    <section className='flex container mx-auto max-w-6xl px-8 xl:px-0 h-screen pb-3'>
+    <section className='flex sidebar-height md:h-screen pb-5'>
       <div className='flex-1'>
-        <div className='max-w-2xl flex flex-col h-full justify-end'>
+        <div className='max-w-3xl flex flex-col h-full justify-center md:justify-end'>
           <motion.div
             initial='hidden'
             animate='visible'
             variants={variantsSentence}
           >
-            <h1 className='text-4xl lg:text-8xl font-extrabold mb-8'>
+            <h1 className='text-4xl lg:text-8xl font-extrabold uppercase mb-8'>
               Hi there,
               <br />
               I'm Christina, a frontend developer in Toronto.

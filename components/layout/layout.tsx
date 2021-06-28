@@ -1,4 +1,5 @@
-import Navigation from './navigation';
+import Header from './header';
+import Sidebar from './sidebar';
 
 type LayoutProps = {
   children: React.ReactNode;
@@ -7,8 +8,9 @@ type LayoutProps = {
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div>
-      <Navigation />
-      <main className='ml-32'>{children}</main>
+      <Header />
+      <Sidebar />
+      <main className='pt-20 md:pl-40 md:pt-0'>{children}</main>
     </div>
   );
 };

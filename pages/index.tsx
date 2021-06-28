@@ -1,12 +1,12 @@
 import Intro from '../components/home/intro';
-import Portfolio from '../components/home/portfolio';
+import Projects from '../components/home/projects';
 
 const Home = () => {
   return (
-    <>
+    <div className='container mx-auto max-w-5xl px-8 xl:px-0'>
       <Intro />
-      <Portfolio />
-    </>
+      <Projects />
+    </div>
   );
 };
 

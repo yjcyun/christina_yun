@@ -1,34 +1,36 @@
 module.exports = {
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: 'class', // or 'media' or 'class'
   theme: {
     colors: {
       transparent: 'transparent',
-      black: '#000',
-      white: '#fff',
-      navy: '#232946',
-      darknavy: '#232323',
-      beige1: '#fffffe',
-      beige2: '#f8f5f2',
-      babypurple: '#b8c1ec',
-      babypink: '#feefe8',
-      pink: '#eebbc3',
-      orange: '#f25f4c',
+      'black-lighter': '#16161a',
+      'black-dark': '#010101',
+      'white-dark': '#fffffe',
+      green: '#2cb67d',
       purple: '#7f5af0',
-      indigo: '#121629',
+      gray: '#72757e',
+      'gray-light': '#94a1b2',
+    },
+    fontFamily: {
+      sans: ['Maven Pro', 'sans-serif'],
     },
     extend: {
-      fontFamily: {
-        cursive: ['ChristmasClassically'],
-      },
       borderWidth: {
         6: '6px',
       },
       height: {
         '80vh': '80vh',
+        'fit-content': 'fit-content',
       },
       inset: {
         26: '6.5rem',
+      },
+      maxWidth: {
+        400: '400px',
+      },
+      translate: {
+        '100vw': '100vw',
       },
     },
   },

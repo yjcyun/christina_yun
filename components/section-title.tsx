@@ -1,28 +1,12 @@
 type SectionTitleProps = {
   title: string;
-  pretitle: string;
-  children?: React.ReactNode;
-  justify?: string;
 };
 
-const SectionTitle: React.FC<SectionTitleProps> = ({
-  title,
-  pretitle,
-  children,
-  justify,
-}) => {
+const SectionTitle: React.FC<SectionTitleProps> = ({ title }) => {
   return (
-    <div
-      className={`max-w-xl ${
-        justify === 'left' ? 'text-left' : 'text-center mx-auto'
-      }`}
-    >
-      <div className='relative'>
-        {children}
-        <p className='font-cursive transform -rotate-6 -translate-y-8 text-3xl absolute'>
-          {pretitle}
-        </p>
-        <h2 className='text-4xl font-bold mb-6'>{title}</h2>
+    <div className='border-b-4 border-black-dark dark:border-gray mb-8'>
+      <div className='border-4 border-b-0 border-black-dark dark:border-gray capitalize py-1 px-3 inline-flex text-2xl font-bold'>
+        {title}
       </div>
     </div>
   );
