@@ -1,0 +1,49 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Plantiful",
+      "desc": "Description goes here",
+      "imgUrl": "images/projects/image1.jpg",
+      "live": "https://yjcyun.github.io/Plantiful_plants_store/",
+      "github": "https://github.com/yjcyun/Plantiful_plants_store",
+      "featured": true
+    },
+    {
+      "id": 4,
+      "title": "Personal Website v1",
+      "desc": "Description goes here",
+      "imgUrl": "images/projects/image1.jpg",
+      "live": "https://christinayun.netlify.app",
+      "github": "https://github.com/yjcyun/react-christina-yun-v1",
+      "featured": true
+    },
+    {
+      "id": 5,
+      "title": "Thread And Needle",
+      "desc": "Description goes here",
+      "imgUrl": "images/projects/image1.jpg",
+      "live": "https://threadandneedle.netlify.app/",
+      "github": "https://github.com/yjcyun/react_fabric_store",
+      "featured": false
+    },
+    {
+      "id": 6,
+      "title": "Adopt Dog",
+      "desc": "Description goes here",
+      "imgUrl": "images/projects/image1.jpg",
+      "live": "https://react-adopt-dog.netlify.app/",
+      "github": "https://github.com/yjcyun/react_adopt_dog",
+      "featured": false
+    },
+    {
+      "id": 7,
+      "title": "Heather Dick",
+      "desc": "Description goes here",
+      "imgUrl": "images/projects/image1.jpg",
+      "live": "https://heatherdick.ca",
+      "github": "https://github.com/yjcyun/heather_dick_portfolio",
+      "featured": false
+    }
+  ]
+}
