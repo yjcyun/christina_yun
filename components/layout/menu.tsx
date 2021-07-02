@@ -4,7 +4,6 @@ import Link from 'next/link';
 const navItems = [
   { label: 'Projects', link: '/projects' },
   { label: 'About', link: '/about' },
-  { label: 'Snippets', link: '/snippets' },
 ];
 
 const Menu = () => {

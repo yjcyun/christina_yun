@@ -19,7 +19,7 @@ const MobileNavigation = ({ navOpen, setNavOpen }: MobileNavigationProps) => {
       onClick={() => setNavOpen(false)}
     >
       <div
-        className={`fixed max-w-400 w-8/12 -top-20 bottom-0 right-0 h-screen bg-white-dark z-20  shadow-xl`}
+        className={`fixed max-w-400 w-8/12 -top-20 bottom-0 right-0 h-screen bg-white-dark dark:bg-black-lighter z-20  shadow-xl`}
         onClick={(e) => e.stopPropagation()}
       >
         <div className='flex flex-col mt-20 items-center justify-between text-center sidebar-height py-10'>

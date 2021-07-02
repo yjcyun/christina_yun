@@ -21,6 +21,7 @@ class MyDocument extends Document {
             href='https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;600;700;800&display=swap'
             rel='stylesheet'
           />
+          <link rel='shortcut icon' href='/favicon.ico' />
         </Head>
         <body className='bg-white-dark dark:bg-black-lighter'>
           <Main />

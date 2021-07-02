@@ -8,7 +8,7 @@ export const getSnippetFiles = () => {
   return fs.readdirSync(snippetDirectory);
 };
 
-export const getSnippetData = (snippetIdentifier: string) => {
+export const getSnippetData = async (snippetIdentifier: string) => {
   const snippetSlug = snippetIdentifier.replace(/\.md$/, '');
   const filePath = path.join(snippetDirectory, `${snippetSlug}.md`);
   const fileContent = fs.readFileSync(filePath, 'utf-8');
@@ -22,7 +22,7 @@ export const getSnippetData = (snippetIdentifier: string) => {
   return snippetData;
 };
 
-export const getAllSnippets = () => {
+export const getAllSnippets = async () => {
   const snippetFiles = getSnippetFiles();
 
   const allSnippets = snippetFiles.map((snippetFile) => {

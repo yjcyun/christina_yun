@@ -8,10 +8,10 @@ const Header = () => {
   const [navOpen, setNavOpen] = useState(false);
 
   return (
-    <header className='w-full max-h-20 flex justify-between fixed px-8 py-4 bg-white-dark md:bg-transparent z-50'>
+    <header className='w-full max-h-36 flex justify-between fixed px-8 py-4 md:py-9 bg-white-dark dark:bg-black-lighter md:dark:bg-transparent md:bg-transparent z-50'>
       <Link href='/'>
-        <a href='' className='cursor=pointer'>
-          <Image src='/images/logo.png' width={100} height={60} />
+        <a className='cursor-pointer text-2xl font-bold border border-black-lighter dark:border-white-dark p-2 rounded w-12 h-12 text-center'>
+          Y
         </a>
       </Link>
       <div
